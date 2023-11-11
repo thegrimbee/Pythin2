@@ -1,9 +1,40 @@
+@font-face {
+  font-family: 'Lato-regular';
+  src: url('/static/fonts/Lato-Regular.ttf') format('tff');
+}
+@font-face {
+  font-family: 'Lato-black';
+  src: url('/static/fonts/Lato-Black.ttf') format('tff');
+}
 body {
-  background-color: #042239;
-  color: #360439;
-  font-family: Arial, sans-serif;
+  background-color: #18cd0e;
+  color: white;
+  font-family: 'Lato-regular', sans-serif;
 }
 h1 {
-  color: #073904;
+  color: white;
   border-radius: 5px;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #18cd0e;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover {
+  background-color: #129d0b;
+  transform: scale(1.5);
+}
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

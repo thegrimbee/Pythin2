@@ -1,6 +1,7 @@
 
 // Define variables
 @primary-color: #18cd0e;
+@dark-primary-color: darken(@primary-color, 20%);
 @secondary-color: spin(@primary-color, 180);
 
 // Define mixins
@@ -28,4 +29,30 @@ body {
 h1 {
   color: white;
   .border-radius(5px);
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: @dark-primary-color;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: darken(@primary-color, 10%);
+    transform: scale(1.5);
+  }
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

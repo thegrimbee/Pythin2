@@ -1,6 +1,7 @@
 
 from flask import Flask
 from dotenv import load_dotenv
+from .main import main as main_blueprint
 import os
 
 #Load .env file
@@ -11,10 +12,11 @@ load_dotenv(dotenv_path)
 def create_app():
     app = Flask(__name__)
 
-    # Add any necessary configuration here
+    # App configurations
     app.config['SECRET_KEY'] = os.getenv('PYTHIN2_SECRET_KEY')
-    
-    # Add any necessary routes here
+
+    # Register blueprints
+    app.register_blueprint(main_blueprint)
 
     return app
 
