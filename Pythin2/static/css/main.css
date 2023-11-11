@@ -15,12 +15,12 @@ h1 {
   color: white;
   border-radius: 5px;
 }
-.button {
+button {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  background-color: #18cd0e;
+  background-color: #0d6e07;
   color: white;
   text-decoration: none;
   font-size: 16px;
@@ -28,13 +28,29 @@ h1 {
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin: 10px;
 }
-.button:hover {
+button:hover {
   background-color: #129d0b;
   transform: scale(1.5);
 }
-.centered-container {
+.center-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+}
+.right-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 100;
 }

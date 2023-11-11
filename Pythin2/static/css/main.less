@@ -31,7 +31,7 @@ h1 {
   .border-radius(5px);
 }
 
-.button {
+button {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 5px;
@@ -44,6 +44,7 @@ h1 {
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin: 10px;
 
   &:hover {
     background-color: darken(@primary-color, 10%);
@@ -51,8 +52,25 @@ h1 {
   }
 }
 
-.centered-container {
+.center-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+}
+
+.right-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 100;
 }
