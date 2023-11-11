@@ -1,0 +1,31 @@
+
+// Define variables
+@primary-color: #18cd0e;
+@secondary-color: spin(@primary-color, 180);
+
+// Define mixins
+.border-radius(@radius) {
+  border-radius: @radius;
+}
+.font-face(@font-family, @font-path) {
+  @font-face {
+    font-family: @font-family;
+    src: url(@font-path) format('tff');
+  }
+}
+
+// Define fonts
+.font-face('Lato-regular', '/static/fonts/Lato-Regular.ttf');
+.font-face('Lato-black', '/static/fonts/Lato-Black.ttf');
+
+// Define styles
+body {
+  background-color: @primary-color;
+  color: white;
+  font-family: 'Lato-regular', sans-serif;
+}
+
+h1 {
+  color: white;
+  .border-radius(5px);
+}
