@@ -1,6 +1,6 @@
 
 // Define variables
-@primary-color: #18cd0e;
+@primary-color: #13b70a;
 @dark-primary-color: darken(@primary-color, 20%);
 @secondary-color: spin(@primary-color, 180);
 
@@ -19,6 +19,12 @@
 .font-face('Lato-regular', '/static/fonts/Lato-Regular.ttf');
 .font-face('Lato-black', '/static/fonts/Lato-Black.ttf');
 
+// Define animations
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
 // Define styles
 body {
   background-color: @primary-color;
@@ -29,13 +35,17 @@ body {
 h1 {
   color: white;
   .border-radius(5px);
+  font-family: 'Lato-black', sans-serif;
 }
 
 button {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    0px 0px 10px rgba(0, 0, 0, 0.8), 
+    0px 0px 20px rgba(0, 0, 0, 0.3), 
+    0px 0px 30px rgba(0, 0, 0, 0.1);
   background-color: @dark-primary-color;
   color: white;
   text-decoration: none;
@@ -48,8 +58,17 @@ button {
 
   &:hover {
     background-color: darken(@primary-color, 10%);
-    transform: scale(1.5);
+    transform: scale(1.25);
   }
+}
+
+.welcome {
+  border-color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  max-width: 17ch;
+  animation: typing 2s steps(100, end) forwards;
 }
 
 .center-container {
