@@ -1,0 +1,15 @@
+Folder PATH listing for volume Windows
+Volume serial number is A640-B021
+C:.
++---Pythin2
+    +---database
+    +---game
+    +---main
+    ¦   +---__pycache__
+    +---static
+    ¦   +---css
+    ¦       +---fonts
+    ¦           +---Lato
+    +---templates
+    +---user
+    +---__pycache__
