@@ -1,11 +1,10 @@
-
 from pymongo import MongoClient
 import hashlib
 
 class Database:
-    def __init__(self, uri):
+    def __init__(self, uri, db_name):
         self.client = MongoClient(uri)
-        self.db = self.client.get_database()
+        self.db = self.client.get_database(db_name)
 
     def get_collection(self, collection_name):
         return self.db[collection_name]
@@ -13,7 +12,7 @@ class Database:
 class UserDatabase(Database):
     def __init__(self):
         print("UserDatabase initializing...")
-        self.__init__('mongodb://localhost:27017')
+        super().__init__('mongodb://localhost:27017', 'user_db')
         self.users = self.get_collection("users")
     
     def user_exists(self, username):

@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'Lato-regular';
+  src: url('/static/fonts/Lato-Regular.ttf') format('tff');
+}
+@font-face {
+  font-family: 'Lato-black';
+  src: url('/static/fonts/Lato-Black.ttf') format('tff');
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+body {
+  background-color: #13b70a;
+  color: white;
+  font-family: 'Lato-regular', sans-serif;
+}
+h1 {
+  color: white;
+  border-radius: 5px;
+  font-family: 'Lato-black', sans-serif;
+}
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8), 0px 0px 20px rgba(0, 0, 0, 0.3), 0px 0px 30px rgba(0, 0, 0, 0.1);
+  background-color: #095605;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 10px;
+}
+button:hover {
+  background-color: #0e8707;
+  transform: scale(1.25);
+}
+.welcome {
+  border-color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  max-width: 17ch;
+  animation: typing 2s steps(100, end) forwards;
+}
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.right-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 100;
+}
+body {
+  background-color: #13b70a;
+  color: white;
+  font-family: 'Lato-regular', sans-serif;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 5%;
+}
+.user-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  color: white;
+  font-family: 'Lato-regular', sans-serif;
+}
+.user-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.user-container form input {
+  margin: 10px;
+  padding: 20px;
+  background-color: #dcdcdc;
+  font-size: large;
+}
+.user-container h1 {
+  color: #095605;
+}

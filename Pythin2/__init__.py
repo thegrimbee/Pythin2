@@ -1,7 +1,7 @@
-
 from flask import Flask
 from dotenv import load_dotenv
 from .main import main_bp as main_blueprint
+from .user import user_bp as user_blueprint
 import os
 
 #Load .env file
@@ -18,6 +18,7 @@ def create_app():
 
     # Register blueprints
     app.register_blueprint(main_blueprint)
+    app.register_blueprint(user_blueprint)
 
     # Print routes
     print("Routes:")

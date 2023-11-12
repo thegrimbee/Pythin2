@@ -2,25 +2,23 @@
 <html>
 
 <head>
-    <title>Pythin2</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}">
 </head>
 
 <body>
-    <div class="top">
-        <div class="right-container">
-            <button class="login-button" onclick="window.location.href='/login.html'">Login</button>
-            <button class="register-button">Register</button>
-        </div>
+    <div class="user-container" id="register-container">
+        <h1>Register</h1>
+        <form action="{{ url_for('user.register') }}" method="POST">
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+            <button type="submit">Login</button>
+        </form>
     </div>
-    <div class="content">
-        <div class="center-container">
-            <h1 class="welcome">Welcome to Pythin2</h1>
-        </div>
-        <div class="center-container">
-            <button class="play-button">Play</button>
-        </div>
-    </div> 
+</body>
+
+</html>
+    
 </body>
 
 </html>

@@ -18,7 +18,18 @@ def login():
         print("Login page being rendered...")
         return render_template('login.html')
 
-@user_bp.route('/register')
+@user_bp.route('/register', methods=['GET', 'POST'])
 def register():
-    print("Register page being rendered...")
-    return render_template('register.html')
+    if request.method == 'POST':
+        print("Registering user...")
+        username = request.form['username']
+        password = request.form['password']
+        if user_db.register_user(username, password):
+            print(f"{username} registered")
+            return redirect(url_for('index'))
+        else:
+            print("Registration failed")
+            return render_template('register.html')
+    else:
+        print("Register page being rendered...")
+        return render_template('register.html')
