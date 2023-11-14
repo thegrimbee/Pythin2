@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {% if type == 'login' %}
+            Login
+        {% else %}
+            Register
+        {% endif %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}">
+</head>
+<body>
+    <div class="center-container" id="outer-container">
+        <div class="user-container" id="{% if type == 'login' %}
+            login-container
+        {% else %}
+            register-container
+        {% endif %}">
+            <h1>
+                {% if type == 'login' %}
+                    Login
+                {% else %}
+                    Register
+                {% endif %}
+            </h1>
+            <form action="{% if type == 'login' %}
+                {{ url_for('user.login') }}
+            {% else %}
+                {{ url_for('user.register') }}
+            {% endif %}" method="POST">
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <button type="submit">
+                    {% if type == 'login' %}
+                        Login
+                    {% else %}
+                        Register
+                    {% endif %}
+                </button>
+            </form>
+            {% if failed %}
+                {% if type == 'login' %}
+                    <p class="warning">Incorrect username or password!</p>
+                {% else %}
+                    <p class="warning">User already exists!</p>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

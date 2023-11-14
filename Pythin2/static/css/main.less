@@ -8,6 +8,7 @@
 .border-radius(@radius) {
   border-radius: @radius;
 }
+
 .font-face(@font-family, @font-path) {
   @font-face {
     font-family: @font-family;
@@ -18,12 +19,6 @@
 // Define fonts
 .font-face('Lato-regular', '/static/fonts/Lato-Regular.ttf');
 .font-face('Lato-black', '/static/fonts/Lato-Black.ttf');
-
-// Define animations
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
 
 // Define styles
 body {
@@ -55,7 +50,6 @@ button {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   margin: 10px;
-
   &:hover {
     background-color: darken(@primary-color, 10%);
     transform: scale(1.25);
@@ -63,12 +57,14 @@ button {
 }
 
 .welcome {
-  border-color: black;
   overflow: hidden;
   white-space: nowrap;
   font-size: 1.6rem;
   max-width: 17ch;
   animation: typing 2s steps(100, end) forwards;
+  #verify-welcome {
+    animation: typing 2s steps(100, end) 5s forwards;
+  }
 }
 
 .center-container {
@@ -92,4 +88,8 @@ button {
   width: 100%;
   background-color: transparent;
   z-index: 100;
+}
+
+.warning {
+  color: red;
 }

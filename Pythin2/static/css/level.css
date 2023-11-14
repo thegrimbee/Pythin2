@@ -68,40 +68,27 @@ button:hover {
 .warning {
   color: red;
 }
-body {
-  height: 95vh;
-  padding: 0px;
+button {
+  margin: 5%;
 }
-#outer-container {
-  height: 100%;
+.passed {
   background-color: #13b70a;
 }
-.user-container {
+.attempted {
+  background-color: #ffdd00;
+}
+.unattempted {
+  background-color: grey;
+}
+.grid {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: white;
-  font-family: 'Lato-regular', sans-serif;
-  border-radius: 10px;
-  padding: 20px;
-  width: 40%;
+  flex-wrap: wrap;
 }
-.user-container form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.user-container form input {
-  margin: 20px;
-  padding: 10px;
-  background-color: #dcdcdc;
-  font-size: large;
-}
-.user-container form button {
-  margin: 20px;
-}
-.user-container h1 {
-  color: #095605;
+.grid .gridbox {
+  background: transparent;
+  border-radius: 0;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  box-sizing: border-box;
 }

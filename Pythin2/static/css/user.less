@@ -1,12 +1,13 @@
 @import "main.less";
 
 body {
+  height: 95vh;
+  padding: 0px;
+}
+
+#outer-container {
+  height: 100%;
   background-color: @primary-color;
-  color: white;
-  font-family: 'Lato-regular', sans-serif;
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 5%;
 }
 
 .user-container {
@@ -15,19 +16,26 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: white;
-  color: white;
   font-family: 'Lato-regular', sans-serif;
+  border-radius: 10px; 
+  padding: 20px;
+  width: 40%;
 
   form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     input {
-      margin: 10px;
-      padding: 20px;
+      margin: 20px;
+      padding: 10px;
       background-color: rgb(220, 220, 220);
       font-size: large;
+    }
+
+    button {
+      margin: 20px;
     }
   }
 

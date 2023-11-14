@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Levels</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/level.css') }}">
+</head>
+<body>
+    <h1>Levels</h1>
+    <div class="level-container">
+        {% for i in range(1, 11) %}
+            {% if loop.index0 % 4 == 0 %}
+                <div class="row">
+            {% endif %}
+            {% if i in passed %}
+                <button class="passed" onclick="window.location.href='/level/{{ i }}'">Level {{ i }}</button>
+            {% elif i in attempted %}
+                <button class="attempted" onclick="window.location.href='/level/{{ i }}'">Level {{ i }}</button>
+            {% else %}
+                <button class="unattempted" onclick="window.location.href='/level/{{ i }}'">Level {{ i }}</button>
+            {% endif %}
+            {% if loop.index0 % 4 == 3 or loop.last %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>

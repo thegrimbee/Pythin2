@@ -6,14 +6,6 @@
   font-family: 'Lato-black';
   src: url('/static/fonts/Lato-Black.ttf') format('tff');
 }
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
 body {
   background-color: #13b70a;
   color: white;
@@ -44,12 +36,14 @@ button:hover {
   transform: scale(1.25);
 }
 .welcome {
-  border-color: black;
   overflow: hidden;
   white-space: nowrap;
   font-size: 1.6rem;
   max-width: 17ch;
   animation: typing 2s steps(100, end) forwards;
+}
+.welcome #verify-welcome {
+  animation: typing 2s steps(100, end) 5s forwards;
 }
 .center-container {
   display: flex;
@@ -70,4 +64,7 @@ button:hover {
   width: 100%;
   background-color: transparent;
   z-index: 100;
+}
+.warning {
+  color: red;
 }

@@ -1,0 +1,32 @@
+@import "main.less";
+
+@attempted-color: rgb(255, 221, 0);
+
+button {
+  margin: 5%;
+}
+
+.passed {
+  background-color: @primary-color;
+}
+
+.attempted {
+  background-color: @attempted-color;
+}
+
+.unattempted {
+  background-color: grey;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  .gridbox {
+    background: transparent;
+    border-radius: 0;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    box-sizing: border-box;
+  }
+}

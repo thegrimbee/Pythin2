@@ -1,12 +1,8 @@
-
 from flask import Blueprint, render_template
+from .levels import *
+from . import game_bp
 
-main_bp = Blueprint('main_bp', __name__)
+@game_bp.route('/level<level>')
+def play():
+    return render_template('level.html', level=level)
 
-@main_bp.route('/')
-def index():
-    return render_template('index.html')
-
-@main_bp.route('/about')
-def about():
-    return render_template('about.html')

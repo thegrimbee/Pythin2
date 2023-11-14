@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <title>Pythin2</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
@@ -15,12 +16,20 @@
     </div>
     <div class="content">
         <div class="center-container">
-            <h1 class="welcome">Welcome to Pythin2</h1>
+            <h1 id="welcome"></h1>
         </div>
+        <script>
+            var status = "{{ status }}";
+            var strings = ['Welcome to Pythin2']
+            var typed = new Typed('#welcome', {
+                strings: strings,
+                typeSpeed: 50,
+                startDelay: 500,
+                loop: false,
+                showCursor: false,
+            });
+        </script>
         <div class="center-container">
-            <button class="play-button">Play</button>
+            <button class="play-button" onclick="window.location.href='/level'">Play</button> 
         </div>
-    </div> 
-</body>
-
-</html>
+    </div>
